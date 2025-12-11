@@ -1,34 +1,25 @@
-/* -----------------------
-   FUNCIÓN 1: Modo oscuro
-------------------------- */
+/* -------- Modo oscuro -------- */
 document.getElementById("temaBtn").addEventListener("click", () => {
     document.body.classList.toggle("dark");
 });
 
-/* ------------------------------------------------
-   FUNCIÓN 2: Mostrar / Ocultar texto adicional
--------------------------------------------------- */
+/* -------- Leer más -------- */
 document.getElementById("leerMas").addEventListener("click", () => {
     const extra = document.getElementById("infoExtra");
     extra.classList.toggle("oculto");
 
-    if (extra.classList.contains("oculto")) {
-        leerMas.textContent = "Leer más";
-    } else {
-        leerMas.textContent = "Leer menos";
-    }
+    leerMas.textContent = extra.classList.contains("oculto")
+        ? "Leer más"
+        : "Leer menos";
 });
 
-/* -------------------------------
-   FUNCIÓN 3: Validar formulario
--------------------------------- */
+/* -------- Validación del formulario -------- */
 document.getElementById("formulario").addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let nombre = document.getElementById("nombre").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let mensaje = document.getElementById("mensaje").value.trim();
-    let resultado = document.getElementById("resultado");
+    let nombre = nombreInput.value.trim();
+    let email = emailInput.value.trim();
+    let mensaje = mensajeInput.value.trim();
 
     if (nombre === "" || email === "" || mensaje === "") {
         resultado.textContent = "❗ Todos los campos son obligatorios.";
@@ -37,9 +28,9 @@ document.getElementById("formulario").addEventListener("submit", (e) => {
     }
 
     if (!email.includes("@")) {
-        resultado.textContent = "❗ El email no es válido.";
+        resultado.textContent = "❗ El correo no es válido.";
         resultado.style.color = "red";
-        return;
+       return;
     }
 
     resultado.textContent = "✔ Mensaje enviado correctamente.";
