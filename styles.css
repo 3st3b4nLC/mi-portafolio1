@@ -1,155 +1,212 @@
-/* ------------------- VARIABLES ------------------- */
+/* VARIABLES */
 :root {
-    --primario: #4f7df0;
-    --fondo: #f4f6fb;
-    --texto: #222;
-    --card: #ffffff;
+    --primario: #5a7bfd;
+    --texto: #fff;
+    --card: rgba(255, 255, 255, 0.15);
+    --borde: rgba(255, 255, 255, 0.3);
 }
 
 body.dark {
-    --fondo: #0e0e0e;
-    --texto: #f0f0f0;
-    --card: #1c1c1c;
+    --primario: #5a7bfd;
+    --texto: #e5e5e5;
+    --card: rgba(0, 0, 0, 0.45);
+    --borde: rgba(255, 255, 255, 0.1);
 }
 
-/* ------------------- GENERALES ------------------- */
+/* FONDO */
 body {
-    font-family: "Poppins", sans-serif;
     margin: 0;
-    background: var(--fondo);
+    font-family: "Poppins", sans-serif;
+    background: url("https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1600") 
+        center/cover fixed no-repeat;
+    backdrop-filter: brightness(0.6);
     color: var(--texto);
-    transition: 0.3s ease;
+    transition: 0.3s;
+    text-align: center;
 }
 
-/* ------------------- NAVBAR ------------------- */
+/* CAPA OSCURA PARA MEJORAR LEGIBILIDAD */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+/* NAVBAR */
 .navbar {
     position: sticky;
     top: 0;
+    padding: 15px 0;
     display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #ddd;
-    z-index: 10;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid var(--borde);
 }
 
 .navbar a {
-    margin: 0 15px;
-    text-decoration: none;
     color: var(--texto);
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: 600;
 }
 
 .tema-btn {
-    font-size: 20px;
-    background: none;
     border: none;
+    background: none;
+    font-size: 22px;
     cursor: pointer;
-}
-
-/* ------------------- HERO ------------------- */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    padding: 70px;
-    flex-wrap: wrap;
-}
-
-.hero-texto {
-    max-width: 520px;
-}
-
-.hero-texto span {
-    color: var(--primario);
-}
-
-.sub {
-    opacity: 0.8;
-}
-
-.hero-imagen img {
-    width: 300px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-/* ------------------- TARJETAS ------------------- */
-.tarjetas {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: var(--card);
-    padding: 25px;
-    width: 260px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: 0.25s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* ------------------- FORMULARIO ------------------- */
-.formulario {
-    width: 350px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #bbb;
-    background: var(--card);
     color: var(--texto);
 }
 
-/* ------------------- BOTÓN ------------------- */
-.btn-primario {
+/* HERO */
+.hero {
+    padding: 60px 20px;
+}
+
+.hero-content {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--borde);
+}
+
+.foto {
+    width: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--primario);
+    margin-bottom: 20px;
+}
+
+.titulo-principal {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.descripcion {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* BOTONES */
+.btn {
     background: var(--primario);
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
     border: none;
+    margin-top: 20px;
     cursor: pointer;
+    font-weight: 600;
     transition: 0.2s;
 }
 
-.btn-primario:hover {
-    opacity: 0.85;
+.btn:hover {
+    transform: scale(1.05);
 }
 
-/* ------------------- ANIMACIONES ------------------- */
+/* SECCIONES (Sobre mí, Contacto) */
+.sobre-mi, .contacto {
+    padding: 60px 20px;
+}
+
+.sobre-texto {
+    max-width: 700px;
+    margin: auto;
+    background: var(--card);
+    backdrop-filter: blur(20px);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid var(--borde);
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    width: 260px;
+    padding: 25px;
+    background: var(--card);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--borde);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+/* FORMULARIO */
+.form {
+    width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid var(--borde);
+    backdrop-filter: blur(20px);
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: var(--texto);
+    outline: none;
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* FOOTER */
+.footer {
+    padding: 25px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--borde);
+    margin-top: 40px;
+}
+
+/* ANIMACIONES */
 .fade-in {
-    animation: fade 1s ease forwards;
+    animation: fadeIn 1s ease;
 }
 
-@keyframes fade {
+@keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-.slide-up {
-    animation: up 1s ease forwards;
+.oculto {
+    display: none;
 }
-
-@keyframes up {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ------------------- FOOTER ------------------- */
-.footer {
-    text-align: center;
-    padding: 25px;
-    background: var(--card);
-    margin-top: 60px;
+.icono-card {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--primario);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 10px;
 }
