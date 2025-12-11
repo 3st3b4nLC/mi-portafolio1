@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional - Esteban</title>
+    <title>Portafolio - Melani Flores</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <h1 class="logo">Esteban</h1>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo">Melani</h1>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#sobre-mi">Sobre mí</a>
@@ -20,52 +23,67 @@
     </header>
 
     <!-- HERO -->
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero fade-in">
         <div class="hero-texto">
-            <h2>Hola, soy <span>Esteban</span></h2>
-            <p>Desarrollador web en formación, enfocado en crear experiencias digitales modernas, funcionales y atractivas.</p>
+            <h2>Hola, soy <span>Flores Balabarca Melani Grissel</span></h2>
+            <p class="sub">
+                Estudiante de Desarrollo de Software, enfocada en crear experiencias digitales modernas, eficientes y bien estructuradas.
+            </p>
+
             <button id="leerMas" class="btn-primario">Leer más</button>
 
             <p id="infoExtra" class="extra oculto">
-                Me apasiona el desarrollo web, el diseño funcional y la tecnología moderna. 
-                Disfruto transformar ideas en productos digitales que realmente aporten valor.
+                Me apasiona el desarrollo web, la tecnología y la creación de soluciones digitales con impacto real.  
+                Busco mejorar continuamente mis habilidades para convertirme en una profesional sólida y competente en el ámbito tecnológico.
             </p>
+
+            <div class="datos-contacto">
+                <p>📞 963 262 857</p>
+                <p>📧 61011845@iestpasm.edu.pe</p>
+                <a href="https://www.linkedin.com/in/grissel-flores-b-4a858a362" target="_blank">
+                    🔗 LinkedIn
+                </a>
+            </div>
         </div>
 
-        <div class="hero-imagen">
+        <div class="hero-imagen slide-up">
             <img src="imagenes/foto.jpg" alt="Mi Foto">
         </div>
     </section>
 
     <!-- SOBRE MI -->
-    <section id="sobre-mi" class="sobre-mi">
+    <section id="sobre-mi" class="sobre-mi fade-in">
         <h2>Sobre mí</h2>
 
         <p class="sobre-texto">
-            Soy un desarrollador web en formación enfocado en crear soluciones digitales modernas y eficientes.<br><br>
-            Tengo conocimientos en <strong>HTML, CSS y JavaScript</strong>, aplicados en proyectos reales donde priorizo la claridad, la usabilidad y el diseño limpio.<br><br>
-            Poseo una actitud proactiva, pensamiento crítico, capacidad de aprendizaje rápido y gran compromiso con la mejora continua.<br><br>
-            Mi objetivo es seguir creciendo en el mundo tecnológico, participar en proyectos con impacto real y desarrollar habilidades profesionales sólidas.
+            Soy una estudiante de Desarrollo de Software con interés en crear interfaces funcionales y modernas.<br><br>
+            Tengo conocimientos en <strong>HTML, CSS y JavaScript</strong>, aplicados en proyectos prácticos donde priorizo la claridad, la estética y la experiencia del usuario.<br><br>
+            Me caracterizo por ser responsable, organizada, adaptable y con gran capacidad de aprendizaje.  
+            Mi objetivo es crecer profesionalmente y aportar valor en cada proyecto que desarrollo.
         </p>
 
         <div class="tarjetas">
+
             <div class="card">
-                <h3>Desarrollo Web</h3>
-                <p>Creación de interfaces modernas con HTML, CSS y JavaScript.</p>
+                <h3>💻 Desarrollo Web</h3>
+                <p>Construcción de interfaces limpias, modernas y funcionales.</p>
             </div>
+
             <div class="card">
-                <h3>Responsabilidad</h3>
-                <p>Orientado a resultados y cumplimiento de tareas.</p>
+                <h3>📘 Aprendizaje Rápido</h3>
+                <p>Capacidad para adaptarme fácilmente a nuevas tecnologías.</p>
             </div>
+
             <div class="card">
-                <h3>Aprendizaje Rápido</h3>
-                <p>Capacidad para adaptarme a nuevas tecnologías fácilmente.</p>
+                <h3>🎯 Responsabilidad</h3>
+                <p>Compromiso con la calidad, puntualidad y el trabajo bien hecho.</p>
             </div>
+
         </div>
     </section>
 
-    <!-- FORMULARIO -->
-    <section id="contacto" class="formulario-seccion">
+    <!-- CONTACTO -->
+    <section id="contacto" class="formulario-seccion fade-in">
         <h2>Contáctame</h2>
         <form id="formulario" class="formulario">
             <label>Nombre:</label>
@@ -83,9 +101,8 @@
         <p id="resultado" class="resultado"></p>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <p>Esteban • 2025</p>
+        <p>Melani Flores • 2025</p>
     </footer>
 
     <script src="script.js"></script>
