@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Melani Flores</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,85 +22,99 @@
 
     <!-- HERO -->
     <section id="inicio" class="hero fade-in">
-        <div class="hero-texto">
-            <h2>Hola, soy <span>Flores Balabarca Melani Grissel</span></h2>
-            <p class="sub">
-                Estudiante de Desarrollo de Software, enfocada en crear experiencias digitales modernas, eficientes y bien estructuradas.
+
+        <div class="hero-content">
+
+            <img src="imagenes/foto.jpg" class="foto" alt="Foto de perfil">
+
+            <h2 class="titulo-principal">Flores Balabarca Melani Grissel</h2>
+            <p class="descripcion">
+                Estudiante de Desarrollo de Software con interés en interfaces modernas, programación web y soluciones digitales inteligentes.
             </p>
 
-            <button id="leerMas" class="btn-primario">Leer más</button>
+            <button id="leerMas" class="btn">Leer más</button>
 
             <p id="infoExtra" class="extra oculto">
-                Me apasiona el desarrollo web, la tecnología y la creación de soluciones digitales con impacto real.  
-                Busco mejorar continuamente mis habilidades para convertirme en una profesional sólida y competente en el ámbito tecnológico.
+                Me apasiona el desarrollo web, la tecnología y la creación de herramientas digitales útiles. <br><br>
+                Mi objetivo profesional es fortalecer mis habilidades técnicas y participar en proyectos de software que aporten valor real, eficiencia y diseño funcional.  
+                Poseo compromiso, responsabilidad, organización y capacidad para trabajar tanto individualmente como en equipo.
             </p>
 
-            <div class="datos-contacto">
+            <div class="info">
                 <p>📞 963 262 857</p>
                 <p>📧 61011845@iestpasm.edu.pe</p>
                 <a href="https://www.linkedin.com/in/grissel-flores-b-4a858a362" target="_blank">
-                    🔗 LinkedIn
+                    🔗 Perfil de LinkedIn
                 </a>
             </div>
-        </div>
 
-        <div class="hero-imagen slide-up">
-            <img src="imagenes/foto.jpg" alt="Mi Foto">
         </div>
     </section>
 
     <!-- SOBRE MI -->
     <section id="sobre-mi" class="sobre-mi fade-in">
         <h2>Sobre mí</h2>
-
         <p class="sobre-texto">
-            Soy una estudiante de Desarrollo de Software con interés en crear interfaces funcionales y modernas.<br><br>
-            Tengo conocimientos en <strong>HTML, CSS y JavaScript</strong>, aplicados en proyectos prácticos donde priorizo la claridad, la estética y la experiencia del usuario.<br><br>
-            Me caracterizo por ser responsable, organizada, adaptable y con gran capacidad de aprendizaje.  
-            Mi objetivo es crecer profesionalmente y aportar valor en cada proyecto que desarrollo.
+            Soy estudiante de Desarrollo de Software con conocimientos en <strong>HTML, CSS, JavaScript y lógica de programación</strong>.
+            Disfruto diseñar interfaces limpias y funcionales, aplicando buenas prácticas y cuidando la experiencia del usuario.<br><br>
+
+            Tengo habilidades como:<br><br>
+            ✔ Aprendizaje rápido<br>
+            ✔ Organización y puntualidad<br>
+            ✔ Adaptabilidad<br>
+            ✔ Pensamiento crítico<br>
+            ✔ Responsabilidad y trabajo en equipo<br><br>
+
+            Busco consolidar mi carrera en el mundo tecnológico, donde pueda seguir aprendiendo y contribuyendo con proyectos reales.
         </p>
 
-        <div class="tarjetas">
+       <div class="cards">
 
-            <div class="card">
-                <h3>💻 Desarrollo Web</h3>
-                <p>Construcción de interfaces limpias, modernas y funcionales.</p>
-            </div>
+    <div class="card zoom">
+        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721293.png" class="icono-card">
+        <h3>💻 Desarrollo Web</h3>
+        <p>Creación de sitios modernos y centrados en el usuario.</p>
+    </div>
 
-            <div class="card">
-                <h3>📘 Aprendizaje Rápido</h3>
-                <p>Capacidad para adaptarme fácilmente a nuevas tecnologías.</p>
-            </div>
+    <div class="card zoom">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="icono-card">
+        <h3>📘 Aprendizaje Rápido</h3>
+        <p>Capacidad de dominar nuevas tecnologías en poco tiempo.</p>
+    </div>
 
-            <div class="card">
-                <h3>🎯 Responsabilidad</h3>
-                <p>Compromiso con la calidad, puntualidad y el trabajo bien hecho.</p>
-            </div>
+    <div class="card zoom">
+        <img src="https://cdn-icons-png.flaticon.com/512/3209/3209993.png" class="icono-card">
+        <h3>🎯 Responsabilidad</h3>
+        <p>Comprometida con la calidad en cada proyecto.</p>
+    </div>
 
-        </div>
+    <div class="card zoom">
+        <img src="https://cdn-icons-png.flaticon.com/512/2883/2883849.png" class="icono-card">
+        <h3>⚙️ Lógica de Programación</h3>
+        <p>Base sólida en resolución de problemas y estructuras básicas.</p>
+    </div>
+
+</div>
+
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="formulario-seccion fade-in">
+    <section id="contacto" class="contacto fade-in">
         <h2>Contáctame</h2>
-        <form id="formulario" class="formulario">
-            <label>Nombre:</label>
-            <input type="text" id="nombre">
 
-            <label>Email:</label>
-            <input type="email" id="email">
+        <form id="formulario" class="form">
+            <input type="text" id="nombre" placeholder="Tu nombre">
+            <input type="email" id="email" placeholder="Tu correo">
+            <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
 
-            <label>Mensaje:</label>
-            <textarea id="mensaje"></textarea>
-
-            <button type="submit" class="btn-primario">Enviar</button>
+            <button type="submit" class="btn">Enviar</button>
         </form>
 
         <p id="resultado" class="resultado"></p>
     </section>
 
     <footer class="footer">
-        <p>Melani Flores • 2025</p>
+        <p>Hecho con ❤️ por Melani • 2025</p>
     </footer>
 
     <script src="script.js"></script>
